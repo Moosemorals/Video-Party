@@ -6,11 +6,12 @@
 }
 
 html, body {
-    margin: 0;
+    margin: 0 1em;
     height: 100%;
 }
 
 main {
+    border: thin solid black;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
@@ -19,12 +20,12 @@ main {
 }
 
 #player {
-    flex: 2 0 60%;
+    flex: 2 0 auto;
 }
 
 #faces {
     align-self: flex-start;
-    flex: 1 0 30%;
+    flex: 1 0 auto;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;

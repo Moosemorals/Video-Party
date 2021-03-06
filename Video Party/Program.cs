@@ -39,7 +39,10 @@ namespace uk.osric.VideoParty {
             WebHost.CreateDefaultBuilder(args)
                    .UseStartup<Startup>()
                    .UseSerilog()
-                   .UseKestrel(options => options.UseSystemd())
+                   .UseKestrel(options => { 
+                       options.AddServerHeader = false;
+                       options.UseSystemd();
+                   })
                    .Build();
 
 
