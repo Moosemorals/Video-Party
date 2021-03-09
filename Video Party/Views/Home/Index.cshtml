@@ -9,15 +9,23 @@
 </head>
 <body>
     <main>
-        <div id="player">
-            <video controls playsinline preload="auto">
-                <source type="video/webm" src="/video/01.webm" />
-            </video> 
+        <div id="controls">
+            <span>
+                Turn
+                <button type="button" id="subs">on</button>
+                subtitles
+            </span>
+        </div>
+        <div >
+            <video width="720" height="576" 
+                   id="player" controls playsinline preload="auto" src="/video/0">
+            </video>
         </div>
         <div id="faces">
             <video id="local"></video>
         </div>
     </main>
 
+    <script type="module" src="~/static/index.js"></script>
 </body>
 </html>

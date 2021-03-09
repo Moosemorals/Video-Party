@@ -11,7 +11,11 @@ namespace uk.osric.VideoParty.Controllers {
         [HttpGet("Video/{name}")]
         public IActionResult Video(string name) {
 
-            return PhysicalFile(@"C:\Users\Osric Wilkinson\Desktop\5x11-di.webm", "video/webm");
+            if (name == "0") { 
+                return PhysicalFile(@"C:\Users\Osric Wilkinson\Desktop\5x11.webm", "video/webm", true);
+            } else {
+                return PhysicalFile(@"C:\Users\Osric Wilkinson\Desktop\5x11-sub.webm", "video/webm", true); 
+            }
         }
     }
 }
